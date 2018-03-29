@@ -55,11 +55,15 @@ public class DetailActivity extends AppCompatActivity {
 
                             mTitleView.setText("  " + Utility.title);
                             /*加载图片
-                            * 用开源库picsso*/
+                            * 用开源库picsso
+                            * */
                             Picasso.with(DetailActivity.this).load(Utility.imageId).fit().into(mImageView);
                         }
                     });
                 }else{
+                    /*
+                    网络错误
+                     */
                     Toast.makeText(DetailActivity.this,"网络错误",Toast.LENGTH_SHORT).show();
                 }
             }
